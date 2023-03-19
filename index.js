@@ -1,5 +1,6 @@
-function myFunction() {
+//function myFunction() {
   import myData from './data.json';
-  return myData;
-}
+//  export { myData };
+//  return myData;
+//}
 

@@ -1,17 +1,19 @@
 <head>
   <script src='./timelines-chart.min.js'></script>
-  <script type="module" src="./index.js"></script>
+  <script src="./jquery-3.6.3.js"></script>
 </head>
 
 <body>
 
 
   <script>
-  const myData = myFunction()
+  $.getJSON("./data.json", function (myData) {
+  return(data);
+})
   
     TimelinesChart()(document.body)
       .zScaleLabel('My Scale Units')
       .zQualitative(true)
-      .data('./data.json');
+      .data(myData);
   </script>
 </body>
