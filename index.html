@@ -3,11 +3,12 @@
 </head>
 
 <body>
+<script type="module" src="./index.js"></script>
+
   <script>
   
-  import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const myData = require("./data.json");
+
+const myData = getData(true);
 
     TimelinesChart()(document.body)
       .zScaleLabel('My Scale Units')
