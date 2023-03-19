@@ -3,12 +3,12 @@
 </head>
 
 <body>
-<script type="module" src="./index.js"></script>
+
 
   <script>
   
-
-const myData = getData(true);
+const readFile = fs.readFileSync('./data.json', 'utf8');
+const myData = JSON.parse(readFile);
 
     TimelinesChart()(document.body)
       .zScaleLabel('My Scale Units')
