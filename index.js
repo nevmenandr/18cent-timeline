@@ -1,6 +1,1 @@
-function getData() {
-
-import data from './data.json';
-return data;
-
-}
+import myData from './data.json';
