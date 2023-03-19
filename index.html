@@ -7,8 +7,7 @@
 
   <script>
   
-const readFile = fs.readFileSync('./data.json', 'utf8');
-const myData = JSON.parse(readFile);
+  import myData from './data.json';
 
     TimelinesChart()(document.body)
       .zScaleLabel('My Scale Units')
