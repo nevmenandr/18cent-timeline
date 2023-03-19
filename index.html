@@ -1,11 +1,13 @@
 <head>
   <script src='./timelines-chart.min.js'></script>
-  <script type="text/javascript" src="data.json"></script>
 </head>
 
 <body>
   <script>
-    const myData = JSON.parse(data);
+  
+  import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const myData = require("./data.json");
 
     TimelinesChart()(document.body)
       .zScaleLabel('My Scale Units')
