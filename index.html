@@ -1,15 +1,23 @@
 <head>
   <script src='./timelines-chart.min.js'></script>
-  <script src="./jquery-3.6.3.js"></script>
+
 </head>
 
 <body>
 
-
   <script>
-  $.getJSON("./data.json", function (myData) {
-  return(myData);
-})
+
+
+var myData = null;
+$.ajax({
+    'async': false,
+    'global': false,
+    'url': "/data.json",
+    'dataType': "json",
+    'success': function (data) {
+        myData = data;
+    }
+});
   
     TimelinesChart()(document.body)
       .zScaleLabel('My Scale Units')
